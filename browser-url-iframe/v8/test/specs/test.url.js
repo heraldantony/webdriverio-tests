@@ -25,8 +25,8 @@ describe("browser.url after switching iframe", () => {
     await browser.switchToFrame(iframe);
   });
   it("navigate to shopping cart page using browser.url", async () => {
-    // await browser.url(`${baseUrl}#/categories`); 
-    await browser.navigateTo(`${baseUrl}#/categories`);
+    await browser.url(`${baseUrl}#/categories`); 
+    // await browser.navigateTo(`${baseUrl}#/categories`);
     await browser.pause(5000);
     await browser.saveScreenshot(path.resolve("./screenshot-"+new Date().getTime()+".png"), {fullPage: true});
   });
