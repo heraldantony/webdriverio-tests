@@ -25,11 +25,11 @@ describe("browser.url after switching iframe", () => {
     await browser.switchFrame(iframe);
   });
   it("navigate to shopping cart page using browser.url", async () => {
+    // await browser.switchFrame(null);
     await browser.url("#/categories"); // baseUrl from config is prepended
     // await browser.navigateTo(`${baseUrl}#/categories`); // using navigateTo works
     await browser.pause(5000);
     // await browser.saveScreenshot(path.resolve("./screenshot-"+new Date().getTime()+".png"), {fullPage: true});
-    // await browser.switchFrame(null);
   });
   it("navigate back to button sample page", async () => {
     await browser.navigateTo(
